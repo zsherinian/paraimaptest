@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PARAI Mapping Project</title>
+  <meta name="description" content="PARAI Mapping Project — an overview of the project, its goals, and a link to the working prototype." />
+
+  <!-- Social preview (edit url/image when you have a domain + image) -->
+  <meta property="og:title" content="PARAI Mapping Project" />
+  <meta property="og:description" content="An overview of the PARAI mapping project and a link to the prototype." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --bg: #0f1b2d;
+      --bg-accent: #14365c;
+      --surface: #ffffff;
+      --ink: #1a2433;
+      --ink-soft: #51607a;
+      --brand: #2f6fb0;
+      --brand-dark: #1f4e80;
+      --line: #e4e9f1;
+      --radius: 14px;
+      --maxw: 920px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: #f4f6fa;
+      line-height: 1.6;
+    }
+    a { color: var(--brand); }
+
+    /* ---------- Hero ---------- */
+    header.hero {
+      background: linear-gradient(150deg, var(--bg) 0%, var(--bg-accent) 100%);
+      color: #fff;
+      padding: 88px 24px 96px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header.hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.06) 0 2px, transparent 3px),
+        radial-gradient(circle at 70% 60%, rgba(255,255,255,.05) 0 2px, transparent 3px),
+        radial-gradient(circle at 45% 85%, rgba(255,255,255,.05) 0 2px, transparent 3px);
+      background-size: 180px 180px, 220px 220px, 160px 160px;
+      opacity: .8;
+      pointer-events: none;
+    }
+    .hero-inner { max-width: var(--maxw); margin: 0 auto; position: relative; z-index: 1; }
+    .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 13px;
+      font-weight: 600;
+      color: #9fc1e6;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      line-height: 1.1;
+      margin: 0 0 18px;
+      font-weight: 700;
+    }
+    .hero p.lead {
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      color: #d7e3f2;
+      max-width: 640px;
+      margin: 0 auto 34px;
+    }
+    .btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: #fff; color: var(--brand-dark); box-shadow: 0 8px 22px rgba(0,0,0,.2); }
+    .btn-ghost { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.35); }
+
+    /* ---------- Sections ---------- */
+    main { max-width: var(--maxw); margin: -56px auto 0; padding: 0 24px 80px; position: relative; z-index: 2; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: 0 12px 40px rgba(15,27,45,.06);
+      margin-bottom: 28px;
+    }
+    .card h2 {
+      font-size: 1.5rem;
+      margin: 0 0 14px;
+      color: var(--ink);
+    }
+    .card p { color: var(--ink-soft); margin: 0 0 14px; }
+    .card p:last-child { margin-bottom: 0; }
+
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+    .feature {
+      background: #f7faff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px;
+    }
+    .feature h3 { margin: 0 0 8px; font-size: 1.05rem; color: var(--brand-dark); }
+    .feature p { margin: 0; font-size: .95rem; }
+
+    .contact-line { font-size: 1.05rem; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 32px 24px 48px;
+      color: var(--ink-soft);
+      font-size: .9rem;
+    }
+    footer a { color: var(--brand-dark); }
+
+    @media (max-width: 560px) {
+      .card { padding: 28px 22px; }
+      header.hero { padding: 64px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">University of Oklahoma · Research Project</span>
+      <h1>PARAI Mapping Project</h1>
+      <!-- EDIT: one-sentence summary of what the project is -->
+      <p class="lead">
+        A mapping initiative that brings spatial data to life — making
+        complex geographic information accessible, interactive, and useful.
+      </p>
+      <div class="btn-row">
+        <!-- EDIT: replace # with your prototype URL -->
+        <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View the Prototype</a>
+        <a class="btn btn-ghost" href="#about">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main>
+
+    <!-- About -->
+    <section class="card" id="about">
+      <h2>About the Project</h2>
+      <!-- EDIT: replace with your real description -->
+      <p>
+        The PARAI Mapping Project is a research effort focused on visualizing and
+        analyzing geographic data through interactive mapping tools. Our goal is to
+        make spatial information easier to explore, understand, and act on.
+      </p>
+      <p>
+        This page provides a brief overview of the project and a direct link to the
+        current working prototype. The project is actively in development, and this
+        site will be updated as new features and findings become available.
+      </p>
+    </section>
+
+    <!-- Highlights -->
+    <section class="card">
+      <h2>What We're Building</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Interactive Maps</h3>
+          <p>Explore data layers directly in the browser with pan, zoom, and filtering.</p>
+        </div>
+        <div class="feature">
+          <h3>Open Data</h3>
+          <p>Built on transparent, well-documented datasets that anyone can examine.</p>
+        </div>
+        <div class="feature">
+          <h3>Research-Driven</h3>
+          <p>Grounded in academic research and designed to support real analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prototype CTA -->
+    <section class="card" id="prototype">
+      <h2>Try the Prototype</h2>
+      <p>
+        A working prototype is available now. It's an early version — feedback is
+        welcome as we continue to refine it.
+      </p>
+      <!-- EDIT: replace # with your prototype URL -->
+      <a class="btn btn-primary" style="color:#fff;background:var(--brand-dark);box-shadow:none;"
+         href="#" target="_blank" rel="noopener">Open the Prototype →</a>
+    </section>
+
+    <!-- Community Engagement -->
+    <section class="card" id="community">
+      <h2>Community Engagement</h2>
+      <p>
+        Community engagement and collaboration are central to the project. Our
+        collaborative research takes three forms.
+      </p>
+      <p>
+        <strong>First,</strong> our team brings together scholars, cultural activists,
+        arts-business and media specialists, diasporic Tamil community members, and
+        hereditary parai artists.
+      </p>
+      <p>
+        <strong>Second,</strong> we involve drummers directly in data collection — both
+        across Tamil Nadu and in diasporic Tamil communities such as Mauritius, South
+        Africa, and Malaysia. This includes training younger drummers in recording
+        technology to document their hereditary practice, interview their elders, and
+        build the leadership and business skills needed to promote themselves and their
+        groups.
+      </p>
+      <p>
+        <strong>Third,</strong> we engage the wider Tamil diaspora to test the map and to
+        build support, engagement, and empathy for the musical sophistication of
+        hereditary artists. We especially want to include North American parai players to
+        help us collect survey data from hereditary drummers in your ancestral villages
+        during visits to India — connecting your practice here to its living roots.
+      </p>
+      <p>
+        Our goal is to help build stronger, mutually beneficial relationships between
+        diasporic Tamils and hereditary parai artists.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <p class="contact-line">
+        Questions or interested in collaborating? Reach out at
+        <!-- EDIT: change email if needed -->
+        <a href="mailto:zsherinian@ou.edu">zsherinian@ou.edu</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> PARAI Mapping Project. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
