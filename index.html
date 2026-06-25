@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PARAI Mapping Project</title>
-  <meta name="description" content="PARAI Mapping Project — an overview of the project, its goals, and a link to the working prototype." />
+  <title>Parai Digital Mapping Project</title>
+  <meta name="description" content="Parai Digital Mapping Project — documenting the knowledge of hereditary parai artists of Tamil Nadu and the Tamil diaspora through an interactive community archive and map." />
 
-  <!-- Social preview (edit url/image when you have a domain + image) -->
-  <meta property="og:title" content="PARAI Mapping Project" />
-  <meta property="og:description" content="An overview of the PARAI mapping project and a link to the prototype." />
+  <meta property="og:title" content="Parai Digital Mapping Project" />
+  <meta property="og:description" content="Documenting the knowledge of hereditary parai artists through an interactive community archive and map." />
   <meta property="og:type" content="website" />
 
   <style>
@@ -67,15 +66,15 @@
       margin-bottom: 18px;
     }
     .hero h1 {
-      font-size: clamp(2.1rem, 5vw, 3.4rem);
-      line-height: 1.1;
+      font-size: clamp(2rem, 4.6vw, 3.1rem);
+      line-height: 1.12;
       margin: 0 0 18px;
       font-weight: 700;
     }
     .hero p.lead {
       font-size: clamp(1.05rem, 2.2vw, 1.3rem);
       color: #d7e3f2;
-      max-width: 640px;
+      max-width: 680px;
       margin: 0 auto 34px;
     }
     .btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
@@ -103,21 +102,18 @@
     }
     .card h2 {
       font-size: 1.5rem;
-      margin: 0 0 14px;
+      margin: 0 0 16px;
       color: var(--ink);
+    }
+    .card h3 {
+      font-size: 1.12rem;
+      color: var(--brand-dark);
+      margin: 26px 0 10px;
     }
     .card p { color: var(--ink-soft); margin: 0 0 14px; }
     .card p:last-child { margin-bottom: 0; }
-
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
-    .feature {
-      background: #f7faff;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 22px;
-    }
-    .feature h3 { margin: 0 0 8px; font-size: 1.05rem; color: var(--brand-dark); }
-    .feature p { margin: 0; font-size: .95rem; }
+    .card ul { color: var(--ink-soft); margin: 0 0 6px; padding-left: 22px; }
+    .card li { margin-bottom: 9px; }
 
     .contact-line { font-size: 1.05rem; }
 
@@ -141,15 +137,15 @@
   <!-- ============ HERO ============ -->
   <header class="hero">
     <div class="hero-inner">
-      <span class="eyebrow">University of Oklahoma · Research Project</span>
-      <h1>PARAI Mapping Project</h1>
-      <!-- EDIT: one-sentence summary of what the project is -->
+      <span class="eyebrow">Documenting the Knowledge of Hereditary Artists</span>
+      <h1>Parai Digital Mapping Project</h1>
       <p class="lead">
-        A mapping initiative that brings spatial data to life — making
-        complex geographic information accessible, interactive, and useful.
+        Mapping the diverse expressions of the parai (tappu) frame drum of Tamil Nadu —
+        and the hereditary drummers who have carried its traditions for generations,
+        in India and across the Tamil diasporas.
       </p>
       <div class="btn-row">
-        <!-- EDIT: replace # with your prototype URL -->
+        <!-- EDIT: replace # with your prototype URL when ready -->
         <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View the Prototype</a>
         <a class="btn btn-ghost" href="#about">Learn More</a>
       </div>
@@ -159,51 +155,46 @@
   <!-- ============ MAIN ============ -->
   <main>
 
-    <!-- About -->
+    <!-- Project Description -->
     <section class="card" id="about">
-      <h2>About the Project</h2>
-      <!-- EDIT: replace with your real description -->
+      <h2>Project Description</h2>
       <p>
-        The PARAI Mapping Project is a research effort focused on visualizing and
-        analyzing geographic data through interactive mapping tools. Our goal is to
-        make spatial information easier to explore, understand, and act on.
+        Our project maps the diverse expressions of the parai (also called tappu),
+        frame drum of Tamil Nadu, and the hereditary drummers who have carried its
+        traditions for generations, in India and across the Tamil diasporas. At its
+        heart is a media-rich website and interactive map (GIS) serving as an online
+        community archive, where drummers can visualize and share the full range of
+        their musical knowledge alongside scholarship that helps interpret it.
       </p>
       <p>
-        This page provides a brief overview of the project and a direct link to the
-        current working prototype. The project is actively in development, and this
-        site will be updated as new features and findings become available.
+        Designed to be inclusive, it lets often-overlooked artists showcase the beauty,
+        distinction, and resilience of their art, take greater control over how their
+        knowledge is understood, recorded and transmitted, and be recognized as vital
+        knowledge bearers of Tamil culture — supporting their aspiration to share their
+        knowledge directly with the world.
       </p>
     </section>
 
-    <!-- Highlights -->
-    <section class="card">
-      <h2>What We're Building</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>Interactive Maps</h3>
-          <p>Explore data layers directly in the browser with pan, zoom, and filtering.</p>
-        </div>
-        <div class="feature">
-          <h3>Open Data</h3>
-          <p>Built on transparent, well-documented datasets that anyone can examine.</p>
-        </div>
-        <div class="feature">
-          <h3>Research-Driven</h3>
-          <p>Grounded in academic research and designed to support real analysis.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prototype CTA -->
-    <section class="card" id="prototype">
-      <h2>Try the Prototype</h2>
+    <!-- Current Development Status -->
+    <section class="card" id="status">
+      <h2>Current Development Status</h2>
       <p>
-        A working prototype is available now. It's an early version — feedback is
-        welcome as we continue to refine it.
+        After two years of seed-grant-funded development, our international team has
+        begun the survey and fieldwork phase of the project. So far, we have surveyed
+        nearly 60 senior artists across 5 districts of Tamil Nadu, conducted one
+        community fieldwork training, and visited artists in Mauritius, Réunion Island,
+        and South Africa. Our goal is to survey 300 senior artists throughout Tamil Nadu
+        and train 70 young drummers to document their groups' practices and interview
+        their elders. This demographic and stylistic data will help us compare and
+        contextualize the distinct musical qualities of seven style zones across the
+        state.
       </p>
-      <!-- EDIT: replace # with your prototype URL -->
-      <a class="btn btn-primary" style="color:#fff;background:var(--brand-dark);box-shadow:none;"
-         href="#" target="_blank" rel="noopener">Open the Prototype →</a>
+      <p>
+        In addition, historical and ethnographic data from diasporic Tamil communities
+        around the Indian Ocean — Malaysia, Mauritius, and South Africa, where
+        19th-century hereditary performers migrated as indentured laborers — may help us
+        reconstruct earlier musical practices in Tamil Nadu.
+      </p>
     </section>
 
     <!-- Community Engagement -->
@@ -222,16 +213,16 @@
         <strong>Second,</strong> we involve drummers directly in data collection — both
         across Tamil Nadu and in diasporic Tamil communities such as Mauritius, South
         Africa, and Malaysia. This includes training younger drummers in recording
-        technology to document their hereditary practice, interview their elders, and
-        build the leadership and business skills needed to promote themselves and their
-        groups.
+        technology to document their ensemble's hereditary practice, interview their
+        elders, and build the leadership and business skills needed to promote themselves
+        and their groups.
       </p>
       <p>
-        <strong>Third,</strong> we engage the wider Tamil diaspora to test the map and to
-        build support, engagement, and empathy for the musical sophistication of
-        hereditary artists. We especially want to include North American parai players to
-        help us collect survey data from hereditary drummers in your ancestral villages
-        during visits to India — connecting your practice here to its living roots.
+        <strong>Third,</strong> we work with the wider Tamil diaspora to test the map and
+        to build support, engagement, and empathy for the musical mastery of hereditary
+        artists. We especially want to include North American parai players to help us
+        collect survey data from hereditary drummers in their ancestral villages during
+        visits to India — connecting their practice here to its living roots.
       </p>
       <p>
         Our goal is to help build stronger, mutually beneficial relationships between
@@ -239,12 +230,88 @@
       </p>
     </section>
 
+    <!-- Impact -->
+    <section class="card" id="impact">
+      <h2>Impact</h2>
+      <p>
+        This project will significantly impact hereditary parai artists and Tamil
+        communities around the world, as well as music scholars and researchers of South
+        Asia, and anyone interested in global arts. We intend the map and the data
+        collection process to have the following impacts:
+      </p>
+      <ul>
+        <li>Help musicians and non-musicians understand how parai music works (its music theory), highlighting musical style (bani) similarities and differences to validate and reclaim generational knowledge, community pride, and a positive sense of identity.</li>
+        <li>Gather field recordings and interviews into an historical archive of recent demographic changes among performers, including how staged shows or "folklorization" have affected drummers' status and economic circumstances.</li>
+        <li>Shed light on how cultures have come into contact — by land and sea — and mixed over time, drawing on historical Hindu Temple sculptures and art to recover the history of these musicians back to the 7th century.</li>
+        <li>Give artists a visual and musical platform to showcase what makes their performance style distinct (bani).</li>
+        <li>Help the world understand the creativity hereditary drummers have sustained despite being marginalized and undervalued — told directly through their own stories.</li>
+        <li>Create entrepreneurial opportunities for artists to perform and teach their distinct hereditary knowledge and styles.</li>
+        <li>Strengthen networks among artists, and between artists and aspiring students in the diaspora.</li>
+        <li>Make it easier for diaspora communities to discover and engage with the full range of parai styles.</li>
+        <li>Support the development of parai curriculum within the Tamil Nadu government school system and in diasporic communities, using historical, musical, and ethnographic material drawn directly from cultural knowledge bearers.</li>
+      </ul>
+    </section>
+
+    <!-- How you can get involved -->
+    <section class="card" id="get-involved">
+      <h2>How You Can Get Involved</h2>
+
+      <h3>Things you can do during your next visit to Tamil Nadu</h3>
+      <ul>
+        <li>Conduct the survey in your ancestral village with drummers there — perhaps ones you already know.</li>
+        <li>Record and share video or audio of drummers in your community or during visits to India, with their permission, to add to the project archive.</li>
+        <li>College projects: high school and college drummers in the U.S. can interview village drummers and take a lesson as part of a class project (in World Music or Anthropology courses, for example). Dr. Sherinian is happy to advise such fieldwork.</li>
+        <li>Connect us with elders: help identify and introduce senior hereditary drummers in your family's village who would be valuable to survey.</li>
+        <li>Collect oral histories or family stories about parai traditions passed down in your village.</li>
+        <li>Build a sister-village relationship between your U.S. ensemble and a hereditary group in Tamil Nadu for ongoing exchange. Sponsor drums and costumes for the local troupe, or pay competition fees.</li>
+      </ul>
+
+      <h3>How you can help young parai drummers in India</h3>
+      <ul>
+        <li>Help create entrepreneurial opportunities for young drummers — such as starting a drum-making business, selling instruments in the U.S., creating program opportunities, or building a website for the team. Buy directly from the artists, not dealers.</li>
+        <li>Help a young drummer enter college (paying tuition fees) or earn his or her high school diploma.</li>
+        <li>Sponsor a young drummer's training in recording and documentation skills for our project ($270).</li>
+        <li>Provide electronic equipment for the youth: a tablet or computer for their education.</li>
+      </ul>
+
+      <h3>Help build the historical record</h3>
+      <ul>
+        <li>Photograph sculptures of frame drummers in temples you visit throughout South India to share with our project.</li>
+        <li>Help us identify passages in Tamil literature that use the word <em>parai</em> or describe drumming and drummers.</li>
+      </ul>
+
+      <h3>What you can do for your community here in the U.S./Canada</h3>
+      <ul>
+        <li>Bring a hereditary player from Tamil Nadu to teach your kalai kuzhu in the U.S. (many talented young artists have passports and are ready to spend multiple weeks here). Which style (area) do you want to learn?</li>
+        <li>Curriculum development: help us bring hereditary parai curriculum to your local team.</li>
+      </ul>
+
+      <h3>How you can support the project financially</h3>
+      <p>
+        We have applied for and received seed grant funding; however, because government
+        grants are currently very difficult to obtain and foundation grants are limited,
+        we need more funding to finish the project. Your support could help our team to:
+      </p>
+      <ul>
+        <li>Conduct the survey in your ancestral area ($500).</li>
+        <li>Help fund our map designer.</li>
+        <li>Support a team member's trip to conduct our survey and fieldwork in Malaysia, Mauritius, Réunion, South Africa, or Guyana ($2,000 or airline points).</li>
+      </ul>
+
+      <h3>More ways to help</h3>
+      <ul>
+        <li>Help with translation and transcription of interviews (Tamil to English), if you're bilingual.</li>
+        <li>Host an event: organize a talk, workshop, or performance by Dr. Sherinian or our team members in India to introduce the project and the artists.</li>
+        <li>Volunteer your professional skills: web design, graphic design, grant writing, photography, or videography.</li>
+        <li>Test the map and give feedback once the prototype is available.</li>
+      </ul>
+    </section>
+
     <!-- Contact -->
     <section class="card" id="contact">
       <h2>Contact</h2>
       <p class="contact-line">
-        Questions or interested in collaborating? Reach out at
-        <!-- EDIT: change email if needed -->
+        Interested? Contact Dr. Zoe Sherinian at
         <a href="mailto:zsherinian@ou.edu">zsherinian@ou.edu</a>.
       </p>
     </section>
@@ -252,7 +319,7 @@
   </main>
 
   <footer>
-    <p>© <span id="year"></span> PARAI Mapping Project. All rights reserved.</p>
+    <p>© <span id="year"></span> Parai Digital Mapping Project. All rights reserved.</p>
   </footer>
 
   <script>
