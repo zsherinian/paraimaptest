@@ -12,8 +12,8 @@
 
   <style>
     :root {
-      --bg: #0f1b2d;
-      --bg-accent: #14365c;
+      --bg: #0a2c28;
+      --bg-accent: #14564c;
       --surface: #ffffff;
       --ink: #1a2433;
       --ink-soft: #51607a;
@@ -55,29 +55,72 @@
       opacity: .8;
       pointer-events: none;
     }
-    .hero-inner { max-width: var(--maxw); margin: 0 auto; position: relative; z-index: 1; }
+    .hero-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      text-align: left;
+    }
+    .hero-photo {
+      flex: 0 0 31%;
+      max-width: 31%;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 14px 40px rgba(0,0,0,.35);
+      display: block;
+    }
+    .hero-text { flex: 1; }
+
+    /* Collage on the right */
+    .hero-collage {
+      flex: 0 0 46%;
+      max-width: 46%;
+    }
+    .hero-collage img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 12px 34px rgba(0,0,0,.32);
+      display: block;
+    }
     .eyebrow {
       display: inline-block;
       text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: 13px;
-      font-weight: 600;
-      color: #9fc1e6;
-      margin-bottom: 18px;
+      letter-spacing: .1em;
+      font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+      line-height: 1.25;
+      font-weight: 700;
+      color: #8fe0cf;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      max-width: 1360px;
+      margin: 0 auto 30px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
     }
     .hero h1 {
-      font-size: clamp(2rem, 4.6vw, 3.1rem);
-      line-height: 1.12;
-      margin: 0 0 18px;
+      font-size: clamp(2.6rem, 6vw, 4.6rem);
+      line-height: 1.06;
+      margin: 0 0 12px;
       font-weight: 700;
     }
+    .hero-title .eyebrow { margin-bottom: 0; }
     .hero p.lead {
-      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      font-size: clamp(1rem, 1.9vw, 1.18rem);
       color: #d7e3f2;
-      max-width: 680px;
-      margin: 0 auto 34px;
+      max-width: 100%;
+      margin: 0 0 26px;
     }
-    .btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-row { display: flex; gap: 14px; justify-content: flex-start; flex-wrap: wrap; }
     .btn {
       display: inline-block;
       padding: 14px 28px;
@@ -126,9 +169,24 @@
     }
     footer a { color: var(--brand-dark); }
 
+    @media (max-width: 980px) {
+      .hero-inner { flex-wrap: wrap; justify-content: center; }
+      .hero-photo { flex: 0 0 36%; max-width: 36%; }
+      .hero-text { flex: 1 1 54%; }
+      .hero-collage { flex: 1 1 100%; max-width: 100%; order: 3; }
+    }
+    @media (max-width: 760px) {
+      .hero-inner { flex-direction: column; text-align: center; gap: 26px; }
+      .hero-photo { flex: 0 0 auto; max-width: 78%; }
+      .hero-text { flex: 0 0 auto; }
+      .hero p.lead { margin-left: auto; margin-right: auto; }
+      .btn-row { justify-content: center; }
+      .hero-collage { max-width: 100%; }
+    }
     @media (max-width: 560px) {
       .card { padding: 28px 22px; }
-      header.hero { padding: 64px 20px 80px; }
+      header.hero { padding: 56px 20px 72px; }
+      .hero-photo { max-width: 90%; }
     }
   </style>
 </head>
@@ -136,18 +194,26 @@
 
   <!-- ============ HERO ============ -->
   <header class="hero">
-    <div class="hero-inner">
-      <span class="eyebrow">Documenting the Knowledge of Hereditary Artists</span>
+    <div class="hero-title">
       <h1>Parai Digital Mapping Project</h1>
-      <p class="lead">
-        Mapping the diverse expressions of the parai (tappu) frame drum of Tamil Nadu —
-        and the hereditary drummers who have carried its traditions for generations,
-        in India and across the Tamil diasporas.
-      </p>
-      <div class="btn-row">
-        <!-- EDIT: replace # with your prototype URL when ready -->
-        <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View the Prototype</a>
-        <a class="btn btn-ghost" href="#about">Learn More</a>
+      <span class="eyebrow">Documenting the Knowledge of Hereditary Artists</span>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-photo">
+        <img src="giriya.jpg" alt="Mr. Giriya, a hereditary parai artist, playing the parai frame drum in a rural Tamil Nadu landscape" />
+      </div>
+      <div class="hero-text">
+        <p class="lead">
+          Mapping the diverse expressions of the parai (tappu) frame drum of Tamil Nadu —
+          and the hereditary drummers who have carried its traditions for generations,
+          in India and across the Tamil diasporas.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#about">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-collage">
+        <img src="collage.jpg" alt="A collage of project fieldwork: presenting the interactive parai map, recording audio interviews, and filming documentation with hereditary drummers" />
       </div>
     </div>
   </header>
