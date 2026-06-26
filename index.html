@@ -10,6 +10,13 @@
   <meta property="og:description" content="Documenting the knowledge of hereditary parai artists through an interactive community archive and map." />
   <meta property="og:type" content="website" />
 
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+
+  <!-- Cinzel: cross-platform fallback resembling Copperplate for visitors without it -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     :root {
       --bg: #0a2c28;
@@ -92,11 +99,12 @@
     }
     .eyebrow {
       display: inline-block;
+      font-family: "Copperplate", "Copperplate Gothic Light", "Cinzel", Georgia, serif;
       text-transform: uppercase;
-      letter-spacing: .1em;
+      letter-spacing: .08em;
       font-size: clamp(1.05rem, 1.7vw, 1.4rem);
-      line-height: 1.25;
-      font-weight: 700;
+      line-height: 1.3;
+      font-weight: 600;
       color: #8fe0cf;
       margin-bottom: 16px;
     }
@@ -108,8 +116,10 @@
       text-align: center;
     }
     .hero h1 {
-      font-size: clamp(2.6rem, 6vw, 4.6rem);
-      line-height: 1.06;
+      font-family: "Copperplate", "Copperplate Gothic Light", "Cinzel", Georgia, serif;
+      font-size: clamp(2.4rem, 5.4vw, 4.2rem);
+      line-height: 1.12;
+      letter-spacing: .02em;
       margin: 0 0 12px;
       font-weight: 700;
     }
@@ -168,6 +178,9 @@
       font-size: .9rem;
     }
     footer a { color: var(--brand-dark); }
+    footer .cc-badge { margin: 0 0 12px; }
+    footer .cc-badge img { height: 31px; width: 88px; vertical-align: middle; }
+    footer .license { max-width: 620px; margin: 0 auto 10px; line-height: 1.5; }
 
     @media (max-width: 980px) {
       .hero-inner { flex-wrap: wrap; justify-content: center; }
@@ -385,7 +398,15 @@
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Parai Digital Mapping Project. All rights reserved.</p>
+    <p class="cc-badge">
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener license">
+        <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" />
+      </a>
+    </p>
+    <p class="license">
+      © <span id="year"></span> Parai Digital Mapping Project. This work is licensed under a
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    </p>
   </footer>
 
   <script>
