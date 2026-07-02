@@ -208,6 +208,25 @@
     }
     .single-video { max-width: 660px; margin: 4px auto 0; }
 
+    /* Project team */
+    .team-pi {
+      margin: 4px 0 18px;
+      padding: 14px 18px;
+      background: #f2f7f5;
+      border-left: 4px solid var(--brand);
+      border-radius: 6px;
+      color: var(--ink);
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px 28px;
+      margin-top: 4px;
+    }
+    .team-member { display: flex; flex-direction: column; }
+    .team-member .name { font-weight: 700; color: var(--ink); }
+    .team-member .role { color: var(--ink-soft); font-size: .95rem; }
+
     /* Pull quote inside the banner */
     .hero-quote {
       max-width: 920px;
@@ -242,6 +261,7 @@
       color: #8fe0cf;
       font-size: 1.05rem;
     }
+    .quote-video { max-width: 620px; margin: 26px auto 0; }
 
     .contact-line { font-size: 1.05rem; }
 
@@ -314,6 +334,11 @@
         learning all of that, I got very involved. I really enjoyed it and I learned a lot.
       </blockquote>
       <cite>— Mr. Paulraj, Perambalur</cite>
+      <div class="quote-video">
+        <div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1206568034?h=e332c22498" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Mr. Paulraj speaking about the Parai Mapping project"></iframe>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -338,6 +363,23 @@
         knowledge bearers of Tamil culture — supporting their aspiration to share their
         knowledge directly with the world.
       </p>
+
+      <h3>Project Team</h3>
+      <p class="team-pi">
+        <strong>Principal Investigator:</strong> Dr. Zoe Sherinian, Professor of
+        Ethnomusicology, University of Oklahoma
+      </p>
+      <div class="team-grid">
+        <div class="team-member"><span class="name">Mr. Manimaran Anandan</span><span class="role">Community Co-Director</span></div>
+        <div class="team-member"><span class="name">Mr. Samaran Manimaran</span><span class="role">Project Coordinator</span></div>
+        <div class="team-member"><span class="name">Dr. Jim Sykes</span><span class="role">Academic Collaborator, Ethnomusicology, University of Pennsylvania</span></div>
+        <div class="team-member"><span class="name">Mr. Iniyan Manimaran</span><span class="role">Technology Coordinator</span></div>
+        <div class="team-member"><span class="name">Dr. Umi Hsu</span><span class="role">Map Designer, Ethnomusicologist</span></div>
+        <div class="team-member"><span class="name">Mr. Porchezhian Ramaswamy</span><span class="role">Diasporic Community Coordinator</span></div>
+        <div class="team-member"><span class="name">Mr. M. L. Thirukumaran</span><span class="role">Music Analysis Coordinator</span></div>
+        <div class="team-member"><span class="name">Dr. Arun Raja Selvan</span><span class="role">Translator</span></div>
+        <div class="team-member"><span class="name">Dr. C. Joe Arun</span><span class="role">Academic Advisor, LIBA, Loyola College</span></div>
+      </div>
     </section>
 
     <!-- Current Development Status -->
